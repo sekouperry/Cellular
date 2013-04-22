@@ -1,0 +1,190 @@
+/*****
+    Cell :: Style
+
+    (c)2012 Adam Blankenship
+*****/
+//////
+@import "compass/css3/shared";
+@import "compass/css3/border-radius";
+@import "compass/css3/transition";
+@import "compass/css3/box-shadow";
+@import "config"; 
+@import "mixins";
+//@import "enhance";
+//////
+
+// Primary nodes
+
+body {
+    background: $white;
+    //@include gradient_rad($white, $white, $light_grey);
+}
+#app-wrap {
+}
+
+// Header
+
+#header {
+    height: $header_height;
+    padding: $header_pad;
+    z-index: 2;
+    border-bottom: $black $border;
+    background: $black;
+}
+#logo {
+    position:absolute;
+    top:0;
+    left:.8em;
+    z-index:10;
+}
+#logo > a {
+    display:block;
+    text-indent:-999em;
+    /* Match logo dimensions to create logo button  */
+    width:$logo_width;
+    height:$logo_height;
+    padding: $header_pad;
+    background-color: lighten($black, $color_adjust);
+    background-color: lighten($overlay_dark, $color_adjust);
+    background: url(images/logo.png) $header_pad $header_pad no-repeat;
+    @include box-shadow(inset 0 0 3em $dark_grey);
+}
+#logo a:hover {
+    @include box-shadow(inset 0 0 1em $dark_grey);
+}
+
+// Main Content
+
+#app {
+    z-index:1;
+}
+#content-wrap {
+    margin: 0 auto 1em auto;
+    padding:0;
+    max-width: $p_max_width * 1.5;
+}
+#banner {
+}
+#hilight {
+}
+#content-main {
+    //background-color: $white;
+    //background-color: $overlay_light;
+    margin: 0 0 1em 0;
+}
+#content-main a, #content-main a:link {
+}
+#content-main a:focus {
+}
+#content-main a:hover {
+}
+#content-main a:visited {
+}
+#content-main a:active {
+}
+#content-main h1 {
+}
+#content-main h2 {
+}
+#content-main h3 {
+}
+#content-main h4 {
+}
+#content-main h5 {
+}
+#content-main h6 {
+}
+#content-main p {
+}
+
+// Left Sidebar
+
+#content-sidebar-left {
+    //background: $background_tile;
+}
+#content-sidebar-left a, #content-sidebar-left a:link {
+}
+#content-sidebar-left a:focus {
+}
+#content-sidebar-left a:hover {
+}
+#content-sidebar-left a:visited {
+}
+#content-sidebar-left a:active {
+}
+#content-sidebar-left h1, #content-sidebar-left h2, #content-sidebar-left h3, #content-sidebar-left h4, #content-sidebar-left h5, #content-sidebar-left h6 {
+}
+#content-sidebar-left h1 {
+}
+#content-sidebar-left h2 {
+}
+#content-sidebar-left h3 {
+}
+#content-sidebar-left h4 {
+}
+#content-sidebar-left h5 {
+}
+#content-sidebar-left h6 {
+}
+#content-sidebar-left p {
+}
+
+// Right Sidebar
+
+#content-sidebar-right {
+    //background: $background_tile;
+}
+#content-sidebar-right a, #content-sidebar-right a:link {
+}
+#content-sidebar-right a:focus {
+}
+#content-sidebar-right a:hover {
+}
+#content-sidebar-right a:visited {
+}
+#content-sidebar-right a:active {
+}
+#content-sidebar-right h1, #content-sidebar-right h2, #content-sidebar-right h3, #content-sidebar-right h4, #content-sidebar-right h5, #content-sidebar-right h6 {
+}
+#content-sidebar-right h1 {
+}
+#content-sidebar-right h2 {
+}
+#content-sidebar-right h3 {
+}
+#content-sidebar-right h4 {
+}
+#content-sidebar-right h5 {
+}
+#content-sidebar-right h6 {
+}
+#content-sidebar-right p {
+}
+
+// Footer
+
+#footer {
+    background-color: $black;
+}
+#footer p {
+    color:$white;
+    background-color: $dark_grey;
+    background-color: $overlay_light;
+}
+#footer a, #footer a:link {
+    color: $color_hilight;
+}
+#footer a:hover, #footer a:active, #footer a:focus {
+    color: lighten($color_hilight, $color_adjust);
+}
+#footer a:visited {
+}
+#copyright {
+    clear: both;
+    margin: $p_line_height 0 0 0;
+    padding: $p_line_height;
+    text-align: right;
+    font-weight:bold;
+    background: $black;
+    color: $light_grey;
+}

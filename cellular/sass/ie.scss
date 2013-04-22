@@ -1,0 +1,92 @@
+/* *************
+    Cellular :: IE
+
+Internet Explorer iz breakin teh internetz...
+
+    (c)2012 Adam Blankenship
+*************** */
+//////
+@import "config"; 
+@import "mixins";
+//////
+
+body, * {
+    zoom: 1.0;
+    height: 1%;
+}
+
+body {
+	word-wrap: break-word;
+}
+
+img {
+	-ms-interpolation-mode:bicubic;
+	}
+
+#hilight {
+}
+
+.ribbon {
+    margin:0;
+}
+
+.center {	
+    display:block;
+}
+//* IE6
+* html .clearfix {
+  height: 1%;
+}
+//* IE7
+*:first-child + html .clearfix {
+  min-height: 1%;
+}
+
+.cell,
+.cell-90,
+.cell-80,
+.cell-70,
+.cell-60,
+.cell-50,
+.cell-40,
+.cell-33,
+.cell-30,
+.cell-25,
+.cell-20,
+.cell-10 {
+    height: 1%;
+    overflow:visible;
+
+    position: relative;
+    float: left;
+    display: block;
+    margin: $cell_margin;
+    padding: $cell_padding;
+    z-index: 1;
+}
+
+
+legend {
+// because legend doesn't inherit in IE
+  color:$black;
+}
+
+input,
+textarea,
+select {
+// to enable resizing for IE
+  *font-size:100%;
+}
+
+// Custom styles
+
+.block-link {
+    margin: 0;
+}
+.dropShadow {
+	border:none;
+	//* IE drop shadow looks like crap...
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='$black000')";
+	//IE 5.5 - 7 
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='$black000');
+}

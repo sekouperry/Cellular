@@ -1,0 +1,119 @@
+/*****
+Cell :: Navigation         
+
+(c)2012 Adam Blankenship
+*****/
+//////
+@import "compass/css3/shared";
+@import "compass/css3/border-radius";
+@import "compass/css3/transition";
+@import "compass/css3/box-shadow";
+@import "config"; 
+@import "mixins";
+//////
+
+@media screen {
+// Default Primary Navigation
+
+#nav {
+    float: right;
+    margin: $header_pad;
+}
+#nav ul {
+    margin: 0;
+    padding: 0;
+}
+#nav li {
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#nav a, 
+#nav a:link, 
+#nav a:visited {
+    display: block;
+    font-family: $heading_font;
+    font-size: 1.1em;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 0 .5em;
+    padding: .5em 1em;
+    background: $white;
+    color:#333;
+    @include border-radius($small_border_radius);
+    @include box-shadow(inset $shadow_small $black);
+}
+#nav a:hover,
+#nav a:focus,
+#nav a:active {
+    color: #29b4de;
+    @include box-shadow(inset $shadow_small rgba($color_hilight, 0.5));
+}
+
+// Hide Secondary Navigation
+#nav li ul {
+    position:absolute;
+    left:-9999px;
+}
+
+//////
+}
+
+@media screen and (max-width: $res_mobile) {
+// Make links larger / easier to click
+
+#nav {
+    float:none;
+    display:block;
+    margin:0 0 0 $logo_width;
+    padding:0 0 0 $header_pad * 2;
+}
+#nav li {
+    margin:0;
+    padding:0;
+    float:none;
+}
+#nav a, 
+#nav a:link, 
+#nav a:visited {
+    padding: 1em;
+}
+#nav a:hover, 
+#nav a:focus, 
+#nav a:active {
+}
+
+//////
+}
+
+@media screen and (min-width: $res_large) {
+// Show drop-down links for large screens
+
+#nav li ul {
+    font-size: .9em;
+    margin:0;
+    padding:.5em .3em;
+    background:$overlay_light;
+    border: $border;
+}
+#nav li:hover ul {
+    left:0;
+}
+#nav li li {
+    float:none;
+    padding:.1em 0 0 0;
+}
+#nav li li a, 
+#nav li li a:link, 
+#nav li li a:visited {
+    white-space:nowrap;
+    display:block;
+}
+#nav li:hover li a:active, 
+#nav li:hover li a:focus, 
+#nav li:hover li a:hover {
+}
+
+//////
+}

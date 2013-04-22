@@ -1,0 +1,86 @@
+//
+// Cellular :: SASS Configuration
+// (c)2012 Adam Blankenship
+//
+
+// Set stylesheet breakpoints
+$res_mobile : 650px;
+$res_large : 1024px;
+
+// Color swatches
+$cyan : #29B4DE;
+$magenta : #DD2A99;
+$yellow : #DDDD2A;
+$red : #8C0D00;
+$green : #57DD2A;
+$blue : #00598E;
+
+$white : #FEFEFE;
+$light_grey : #CCC;
+$dark_grey : #333;
+$black : #111;
+
+$overlay_dark : rgba($black,0.5);
+$overlay_light : rgba($white,0.5);
+$color_adjust : 10%; // Param used to lighten / darken
+
+$color_hilight : $cyan;
+$color_shadow : $black;
+
+// Common box params
+$margin : 0.5em; 
+$padding : 1em;
+$border : thin solid;
+$border_color : #CCC #DDD #EEE;
+$default-border-radius : .3em;
+$small_border_radius : 0.2em;
+
+// Transitions: $property, $duration, $easing
+$transition-duration : 300ms;
+$transition-easing : ease-out;
+$default_transition : all $transition-duration $transition-easing;
+
+// Shadows: $h-off $v-off $blur $spread
+$shadow_big : 0 0 1em 1em;
+$shadow_med : 0 0 .5em .5em;
+$shadow_small : 0 0 .25em .25em;
+
+// Layout Grid
+$cell_margin : 1%;
+$cell_padding : 0;
+$cell_border : 0;
+$space : ($cell_margin * 2) + ($cell_padding * 2) + ($cell_border * 2);
+
+// Body
+$body_font : "SegoeUI, Helvetica, Arial, sans-serif";
+$body_color : #222;
+$body_color2 : lighten($body_color, 50%);
+$body_background : $white;
+$body_background_img : url(images/background-tile.png) repeat;
+
+$p_size : 1em;
+$p_line_height : 1.6em;
+$p_max_width : 52em;
+
+$link_color : #32769e;
+
+/// Header layout
+$logo_width : 64px;
+$logo_height : 64px;
+
+$header_height : 64px;
+$header_pad : 0.8em;
+
+// Heading Text
+$heading_font : "Quicksand";
+$heading_weight : "Quicksand";
+$heading_1_color : darken($body_background, $color_adjust * 2);
+$heading_color : #27cafc; // h2-h6 progressively darken || lighten
+
+// Validation
+$ok_color : $green;
+$warning_color : $yellow;
+$error_color : $red;
+
+// Misc.
+$ribbon_over : 1em;

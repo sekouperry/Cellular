@@ -1,0 +1,202 @@
+/*****
+    Cellular :: Typography
+
+    (c)2012 Adam Blankenship
+*****/
+//////
+@import "compass/css3/shared";
+@import "compass/css3/border-radius";
+@import "compass/css3/transition";
+@import "config"; 
+@import "mixins";
+//////
+
+@font-face {
+ font-family: 'Quicksand';
+ font-style: normal;
+ font-weight: 400;
+ src: local('Quicksand Regular'), local('Quicksand-Regular'), url(//themes.googleusercontent.com/static/fonts/quicksand/v2/sKd0EMYPAh5PYCRKSryvWz8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+ font-family: 'Quicksand';
+ font-style: normal;
+ font-weight: 700;
+ src: local('Quicksand Bold'), local('Quicksand-Bold'), url(//themes.googleusercontent.com/static/fonts/quicksand/v2/32nyIRHyCu6iqEka_hbKsnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: $body_font;
+    line-height: $p_line_height;
+    color: $body_color;
+}
+p {
+    display: block;
+    max-width: $p_max_width;
+    margin: 0 auto;
+    padding: 0 $padding ($p_line_height * 0.5) $padding;
+    color: $body_color;
+}
+
+small {
+    font-size: .75em;
+}
+
+/*****
+    Links
+*****/
+a,
+a:link {
+    color: $link_color;
+    text-decoration: none;
+    outline: none;
+    @include transition($default_transition);
+}
+a:active,
+a:focus,
+a:hover {
+    color: lighten($link_color, $color_adjust);
+    text-decoration: underline;
+    @include transition($default_transition);
+}
+a:active,
+a:focus {
+    outline: thin dotted;
+    outline: .4em -webkit-focus-ring-color;
+    outline-offset: -.1em;
+}
+a:hover {
+    outline: 0;
+}
+a:visited {
+    color: darken($link_color, $color_adjust);
+}
+
+/*****
+    Headings
+*****/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 1em auto .2em auto;
+    padding: 0 0 0 1em;
+    font-family: $heading_font;
+    font-weight: $heading_weight;
+    line-height: 1.1em;
+    border-bottom: $border;
+}
+
+h1 {
+    margin: .2em 0 0 0;
+    font-size: $p_size * 2.25;
+    line-height: 1.6em;
+    color: $heading_1_color;
+    border: none;
+}
+h2 {
+    font-size: $p_size * 2;
+    color: $heading_color;
+}
+h3 {
+    font-size: $p_size * 1.6;
+    color: darken($heading_color, $color_adjust);
+}
+h4 {
+    font-size: $p_size * 1.4;
+    color: darken($heading_color, $color_adjust * 2);
+}
+h5 {
+    font-size: $p_size * 1.2;
+    color: darken($heading_color, $color_adjust * 3);
+}
+h6 {
+    font-size: $p_size;
+    color: darken($heading_color, $color_adjust * 4);
+}
+
+/*****
+    Etc.
+*****/
+// Super/Sub text
+sub,
+sup {
+    position: relative;
+    font-size: .75em;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+//* Quotes
+code,
+pre,
+blockquote,
+q {
+    font-size: 1.1em;
+}
+
+blockquote,
+q {
+    margin: $margin auto;
+    padding: $padding;
+    font-style: italic;
+}
+
+    blockquote:before,
+    q:before {
+        content: "\201C";
+    }
+
+    blockquote:after,
+    q:after {
+        content: "\201D";
+    }
+
+caption {
+    text-align: left;
+}
+
+code,
+pre {
+    font-family: "Courier New", Courier, monospace;
+    margin: 1em auto;
+    padding: 1em;
+    overflow: auto;
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+abbr,
+acronym {
+    border: 0;
+    font-variant:small-caps;
+	font-weight:bold;
+}
+
+//* Quick text alignment classes
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}

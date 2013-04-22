@@ -1,0 +1,35 @@
+/*****
+    Cellular :: Mobile
+
+    (c)2012 Adam Blankenship
+*****/
+//////
+@import "config"; 
+@import "mixins";
+//////
+
+@media screen and (max-width: $res_mobile) {
+//////
+#app-wrap {
+}
+
+#header {
+    height:auto;
+}
+
+#logo {
+     left:0;
+}
+
+#app {
+}
+
+#content-wrap {
+}
+
+#content-sidebar-left,  
+#content-sidebar-right {
+}
+
+//////
+}

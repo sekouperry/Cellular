@@ -1,0 +1,55 @@
+/*
+Print.css
+Copyright (c) 2011 Adam Blankenship / www.ablank.us
+*/
+@media print {
+  /* line 7, ../sass/print.scss */
+  img, p {
+    page-break-inside: avoid;
+  }
+
+  /* line 10, ../sass/print.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 11, ../sass/print.scss */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  /* line 14, ../sass/print.scss */
+  a,
+  a:visited {
+    color: #444;
+    text-decoration: underline;
+  }
+
+  /* line 18, ../sass/print.scss */
+  a:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 21, ../sass/print.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 28, ../sass/print.scss */
+  #app,
+  #content-wrap,
+  #content-main {
+    width: 100%;
+  }
+
+  /* line 34, ../sass/print.scss */
+  #header,
+  #sidebar,
+  #footer,
+  .hidden {
+    visibility: hidden;
+    display: none;
+  }
+}

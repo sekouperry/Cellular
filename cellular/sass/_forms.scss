@@ -1,0 +1,138 @@
+/*****
+    Cellular Forms CSS
+
+    (c)2012 Adam Blankenship
+*****/
+//////
+@import "compass/css3/shared";
+@import "compass/css3/border-radius";
+@import "compass/css3/transition";
+@import "compass/css3/box-shadow";
+@import "config"; 
+@import "mixins";
+//////
+
+form {
+    max-width: $p_max_width;
+    margin: 0 auto;
+}
+
+fieldset {
+    padding: $padding; 
+    margin: $margin; 
+    border: lighten($body_color2, $color_adjust) $border;
+}
+
+legend {
+    font-family: $heading_font;
+    font-weight: $heading_weight; 
+    font-size: 1.2em;
+    padding: 0 .5em;
+    color: $body_color2;
+}
+
+label {
+    font-family: $heading_font;
+    font-weight: $heading_weight;
+    margin:0;
+    padding:0;
+}
+
+input,
+select,
+textarea {
+    font:1em/1.6em $body_font;
+    margin: 0;
+    font-size: 100%;
+    vertical-align: middle;
+    @include border-radius($small_border_radius);
+    @include transition($default_transition);
+}
+
+input:-webkit-autofill {
+	background-color: $white !important;
+	color: $body_color !important;
+}
+input[type=text], 
+input[type=email], 
+input[type=password],
+textarea {
+    display:block;
+    color: $body_color2;
+    background: $white;
+    border: $border;
+    padding:.5em;
+}
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+input[type=text]:focus, 
+input[type=email]:focus, 
+input[type=password]:focus,
+textarea:focus {
+    color: $body_color;
+    background:$white;
+    @include transition($default_transition);
+}
+
+input[type=checkbox],
+input[type=radio] {
+    clear:none;
+    margin:.5em;
+    padding:.5em;
+    vertical-align:middle;
+}
+input[type=checkbox]:focus,
+input[type=radio]:focus{
+    border: $border;
+}
+
+select { 
+    border: $border;
+}
+optgroup {
+}
+option {
+}
+
+button,
+input[type="button"],
+input[type="submit"]{
+    background: $body_color;
+    color: $white;
+    cursor: pointer;
+    font-family: $heading_font;
+    font-weight: $heading_weight;
+    margin: 0 3em;
+    padding:.25em 1em;
+    border: $body_color $border;
+    @include border-radius();
+    @include transition($default_transition);
+    @include box-shadow(inset 0 0 .2em $body_color2);
+}
+
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background: $body_color2;
+    @include box-shadow(inset 0 0 .75em $body_color);
+}
+
+/*****
+* Form Alert Classes
+*****/
+.required {
+	}
+.required:after {
+    content:' *';
+    font-weight:bold;
+}
+.warning {
+    color: $warning_color;
+}
+.error {
+    color: $error_color;
+}

@@ -1,0 +1,45 @@
+/* *************
+    Cellular :: cell-large
+
+Styling for more images or larger screens.
+
+This stylesheet is loaded conditionally to prevent 
+unnecessary bandwidth usage on mobile devices.
+
+    (c)2012 Adam Blankenship
+*************** */
+//////
+@import "config"; 
+@import "mixins";
+//////
+
+body {
+    background: $white url(images/honeycomb_light.png);
+}
+
+// Layout
+
+#header {
+    background: $black url(images/honeycomb_dark.png) repeat;
+}
+
+#logo {
+	}
+	#logo:hover {
+	}
+	#logo > a {
+	}
+
+
+#app-wrap {
+    //@include bg_cover($white, images/bg_photo.jpg);
+}
+
+#app {
+}
+
+#content-main {
+}
+#footer {
+    background: $black url(images/honeycomb_dark.png) repeat;
+}

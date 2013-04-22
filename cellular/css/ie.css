@@ -1,0 +1,146 @@
+/* *************
+    Cellular :: IE
+
+Internet Explorer iz breakin teh internetz...
+
+    (c)2012 Adam Blankenship
+*************** */
+/*****
+    Cellular :: SASS Mixins
+
+    (c)2012 Adam Blankenship
+*****/
+/*
+.round {
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -khtml-border-radius: 1em;
+    border-radius: 1em;
+}
+
+.round-top {
+    -webkit-border-top-left-radius: 1em;
+    -moz-border-radius-topleft: 1em;
+    -khtml-border-radius-topleft: 1em;
+    border-top-left-radius: 1em;
+    -webkit-border-top-right-radius: 1em;
+    -moz-border-radius-topright: 1em;
+    -khtml-border-radius-topright: 1em;
+    border-top-right-radius: 1em;
+}
+
+.round-right {
+    -webkit-border-top-right-radius: 1em;
+    -moz-border-radius-topright: 1em;
+    -khtml-border-radius-topright: 1em;
+    border-top-right-radius: 1em;
+    -webkit-border-bottom-right-radius: 1em;
+    -moz-border-radius-bottomright: 1em;
+    -khtml-border-radius-bottomright: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+.round-bottom {
+    -webkit-border-bottom-left-radius: 1em;
+    -moz-border-radius-bottomleft: 1em;
+    -khtml-border-radius-bottomleft: 1em;
+    border-bottom-left-radius: 1em;
+    -webkit-border-bottom-right-radius: 1em;
+    -moz-border-radius-bottomright: 1em;
+    -khtml-border-radius-bottomright: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+.round-left {
+    -webkit-border-bottom-left-radius: 1em;
+    -moz-border-radius-bottomleft: 1em;
+    -khtml-border-radius-bottomleft: 1em;
+    border-bottom-left-radius: 1em;
+    -webkit-border-top-left-radius: 1em;
+    -moz-border-radius-topleft: 1em;
+    -khtml-border-radius-topleft: 1em;
+}
+
+*/
+/* line 13, ../sass/ie.scss */
+body, * {
+  zoom: 1.0;
+  height: 1%;
+}
+
+/* line 18, ../sass/ie.scss */
+body {
+  word-wrap: break-word;
+}
+
+/* line 22, ../sass/ie.scss */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 29, ../sass/ie.scss */
+.ribbon {
+  margin: 0;
+}
+
+/* line 33, ../sass/ie.scss */
+.center {
+  display: block;
+}
+
+/* line 37, ../sass/ie.scss */
+* html .clearfix {
+  height: 1%;
+}
+
+/* line 41, ../sass/ie.scss */
+*:first-child + html .clearfix {
+  min-height: 1%;
+}
+
+/* line 56, ../sass/ie.scss */
+.cell,
+.cell-90,
+.cell-80,
+.cell-70,
+.cell-60,
+.cell-50,
+.cell-40,
+.cell-33,
+.cell-30,
+.cell-25,
+.cell-20,
+.cell-10 {
+  height: 1%;
+  overflow: visible;
+  position: relative;
+  float: left;
+  display: block;
+  margin: 1%;
+  padding: 0;
+  z-index: 1;
+}
+
+/* line 69, ../sass/ie.scss */
+legend {
+  color: #111111;
+}
+
+/* line 76, ../sass/ie.scss */
+input,
+textarea,
+select {
+  *font-size: 100%;
+}
+
+/* line 83, ../sass/ie.scss */
+.block-link {
+  margin: 0;
+}
+
+/* line 86, ../sass/ie.scss */
+.dropShadow {
+  border: none;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='$black000')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='$black000');
+}

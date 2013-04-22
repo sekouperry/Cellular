@@ -1,0 +1,193 @@
+/* *************
+    Cellular :: Drupal
+
+    (c)2012 Adam Blankenship
+*************** */
+//////
+@import "compass/css3/shared";
+@import "compass/css3/border-radius";
+@import "compass/css3/transition";
+@import "compass/css3/box-shadow";
+@import "config"; 
+@import "mixins";
+
+@import "drupal-core";
+//////
+
+
+.element-invisible {
+  position: absolute !important;
+  left:-999em;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+}
+.element-invisible.element-focusable:active,
+.element-invisible.element-focusable:focus {
+  position: static !important;
+  clip: auto;
+  overflow: visible;
+  height: auto;
+}
+
+
+// Block-link
+
+.block-link-wrap {
+    background-color: $white;
+    background-color: $overlay_light;
+    @include box-shadow($shadow_small lighten($light_grey, $color_adjust));
+    @include transition($default_transition);
+
+    img {
+        //background-color: $light_grey;
+        //background-color: $overlay_dark;
+    }
+    
+    p {
+        font-size: 1.4em;
+        color: lighten($black, $color_adjust * 4);    
+    }
+
+    a,
+    a:visited {
+        color: $white;
+        //margin: 0 -$margin;
+    }
+}
+
+.block-link-wrap:hover {
+    background: $white;
+    @include box-shadow($shadow_med $light_grey);
+    @include transition($default_transition);
+
+    img {
+        background: transparent;
+        @include transition($default_transition);
+    }
+
+    p {
+        color: $dark_grey;    
+    }
+    
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+.block-link {
+    margin: 0 -1%;
+    padding:0;
+    color: $white;
+
+    a,
+    a:link,
+    a:visited {
+        display:block;
+        line-height:1.4em;
+        text-align:center;
+        border-bottom: #999 $border;
+        background: $black;
+        color: $white;
+    }
+    
+    &.active a,
+    a:active,
+    a:hover,
+    a:focus {
+        background: $color_hilight;
+        color:$white;
+    }
+}
+
+
+.block-link.active a,
+.block-link a:active,
+.block-link a:hover,
+.block-link a:focus {
+    background: $color_hilight;
+    color:$white;
+}
+
+// Image Gallery
+.gallery {
+        text-align: center;
+	background: $dark_grey;
+    
+    div,
+    a,
+    img {
+        display: inline;
+        margin: 0 auto;
+    }
+
+}
+
+// Drupal stuffs
+
+// Form buttons
+input[value="Continue"],
+input[value="Submit"] {
+    float:right;
+    background-color: $green;
+}
+
+// User Login
+#block-user-login {
+    float:right;
+    
+    h2 {
+        cursor:pointer;
+        float:left;
+        font-size: $p_size;
+        line-height:3em;
+    }
+    div,
+    form {
+        float:left;
+        margin:0 .5em;
+        font-size:1em;
+        line-height:3em;
+        color: $white;
+    }
+    .item-list li {
+        //*Request new account || password
+        text-indent:-999em;
+        margin:0;
+        padding:0;
+        position:absolute;
+        left:-999em;
+    }
+}
+
+// Colorbox
+a.colorbox {
+	display: inline;
+        display: inline-block;
+	margin: 1em;
+	background: $black;
+        @include box-shadow( 0 .1em .6em .6em $black);
+}
+
+a:hover.colorbox,
+a:focus.colorbox {
+	background: $light_grey;
+	background: $overlay_light;
+        @include box-shadow( 0 .1em .6em .6em $light_grey);
+}
+
+// "Powered by Drupal"
+#block-system-powered-by {
+    /* Powered by */
+    float:right;
+    text-indent:-999em;
+    margin:0 1em;
+}
+#block-system-powered-by a {
+    /* Drupal Logo */
+    display:block;
+    width:84px;
+    height:32px;
+    background:url(images/drupal.png) no-repeat;
+}

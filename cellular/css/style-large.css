@@ -1,0 +1,81 @@
+/* *************
+    Cellular :: cell-large
+
+Styling for more images or larger screens.
+
+This stylesheet is loaded conditionally to prevent 
+unnecessary bandwidth usage on mobile devices.
+
+    (c)2012 Adam Blankenship
+*************** */
+/*****
+    Cellular :: SASS Mixins
+
+    (c)2012 Adam Blankenship
+*****/
+/*
+.round {
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -khtml-border-radius: 1em;
+    border-radius: 1em;
+}
+
+.round-top {
+    -webkit-border-top-left-radius: 1em;
+    -moz-border-radius-topleft: 1em;
+    -khtml-border-radius-topleft: 1em;
+    border-top-left-radius: 1em;
+    -webkit-border-top-right-radius: 1em;
+    -moz-border-radius-topright: 1em;
+    -khtml-border-radius-topright: 1em;
+    border-top-right-radius: 1em;
+}
+
+.round-right {
+    -webkit-border-top-right-radius: 1em;
+    -moz-border-radius-topright: 1em;
+    -khtml-border-radius-topright: 1em;
+    border-top-right-radius: 1em;
+    -webkit-border-bottom-right-radius: 1em;
+    -moz-border-radius-bottomright: 1em;
+    -khtml-border-radius-bottomright: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+.round-bottom {
+    -webkit-border-bottom-left-radius: 1em;
+    -moz-border-radius-bottomleft: 1em;
+    -khtml-border-radius-bottomleft: 1em;
+    border-bottom-left-radius: 1em;
+    -webkit-border-bottom-right-radius: 1em;
+    -moz-border-radius-bottomright: 1em;
+    -khtml-border-radius-bottomright: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+.round-left {
+    -webkit-border-bottom-left-radius: 1em;
+    -moz-border-radius-bottomleft: 1em;
+    -khtml-border-radius-bottomleft: 1em;
+    border-bottom-left-radius: 1em;
+    -webkit-border-top-left-radius: 1em;
+    -moz-border-radius-topleft: 1em;
+    -khtml-border-radius-topleft: 1em;
+}
+
+*/
+/* line 16, ../sass/style-large.scss */
+body {
+  background: #fefefe url(images/honeycomb_light.png);
+}
+
+/* line 22, ../sass/style-large.scss */
+#header {
+  background: #111111 url(images/honeycomb_dark.png) repeat;
+}
+
+/* line 43, ../sass/style-large.scss */
+#footer {
+  background: #111111 url(images/honeycomb_dark.png) repeat;
+}

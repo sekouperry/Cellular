@@ -1,0 +1,157 @@
+/* *************
+    Cellular :: Drupal Views
+
+    (c)2012 Adam Blankenship
+*************** */
+//////
+@import "compass/css3/shared";
+@import "compass/css3/border-radius";
+@import "compass/css3/transition";
+@import "compass/css3/box-shadow";
+@import "config"; 
+@import "mixins";
+//////
+
+
+.item-list {
+    clear: both;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      margin: 0 0 .25em 1.5em;
+      padding: 0;
+    }
+}
+
+
+// Pager
+
+.pager {
+  clear: both;
+  display: block;
+  margin: 0;
+  padding:0;
+  font: bold .8em/1em Arial, sans-serif;
+  background: $dark_grey;
+  border: $border;
+  border-color: $border_color;
+  @include border-radius($small_border_radius);
+  text-align: center;
+
+    .pager-item {
+      margin: .2em;
+    }
+
+    li {
+      float: left;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0;
+      outline: 0;
+      border: $border;
+      border-color: $border_color;
+    }
+
+    a,
+    a:link,
+    a:visited {
+      padding: $padding;
+      color: $white;
+      display: block;
+      cursor: pointer;
+      background: $dark_grey;
+    }
+
+    a:hover,
+    a:focus {
+      background: $white;
+      color: $color_hilight;
+    }
+    
+    .pager-ellipsis,
+    .pager-current {
+      text-decoration: none;
+    }
+
+    .pager-current {
+      margin: .2em .5em;
+      padding: 1em;
+      font-size: 2em;
+      font-weight: bold;
+      outline: 0;
+      background: $white;
+      color: $dark_grey;
+    }
+
+    .pager-first,
+    .pager-previous,
+    .pager-next,
+    .pager-last {
+      margin: .5em;
+      border: none;
+
+      a,
+      a:visited {
+      width: 6em;
+      text-align:center;
+      color: $dark_grey;
+      background: $white;
+      @include border-radius($small_border_radius);   
+    }
+    a:hover {
+      background: $white;
+      color: $color_hilight;
+    }
+}
+
+}
+
+////// Views Slideshow
+
+.views-slideshow-cycle-main-frame {
+    width:90%;
+    margin:0 auto;
+    cursor:pointer;
+
+    @include box-shadow(inset $shadow_med lighten($black, $color_adjust * 2));
+    @include transition($default_transition);
+}
+
+.views-slideshow-cycle-main-frame:hover {	
+    background: rgba(#29B4DE, 0.2);
+    @include box-shadow(inset $shadow_small $color_hilight);
+    @include transition($default_transition);
+}
+
+.slideshow-slide {
+    h3,
+    p,
+    img {
+       float: left;
+       margin: 0;
+   }
+   p {
+       max-width:24em;
+       padding:1em;
+       background:$black;
+       background:$overlay_dark;
+   }
+    h3 a {
+       color: $white;
+   }
+    .active,
+    h3 a:hover {
+       color: $color_hilight;
+   }
+}
+
+.views-field-counter {
+	
+}
+.views-content-counter {
+    float:left;
+    cursor:pointer;
+}

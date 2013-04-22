@@ -1,0 +1,82 @@
+/*****
+    Cellular :: Listable
+
+    (c)2012 Adam Blankenship
+*****/
+//////
+@import "config"; 
+@import "mixins";
+//////
+
+hr {
+    margin: $p_size 0;
+    color: $light_grey;
+    border: $border;
+}
+
+/*****
+    Lists
+*****/
+ol,
+ul,
+dl {
+    margin: 0 0 1em 1.6em;
+    padding: 0;
+    list-style-position: inside;
+    width:auto;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+li {
+    width: auto;
+    margin: 0 auto;
+    max-width: $p_max_width * 0.9;
+}
+
+dt {
+}
+
+dd {
+}
+
+/*****
+    Tables
+*****/
+table {
+    margin:0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: darken($light_grey, $color_adjust) $border;
+}
+
+th,
+thead {
+    font-family: $heading_font;
+    font-weight: $heading_weight;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: $light_grey;
+}
+
+tr:nth-child(odd) {
+    background: $white;
+}
+
+td {
+    padding: .1em .5em;
+    border: darken($light_grey, $color_adjust) $border;
+}
+
+tfoot {
+    font-style: italic;
+}

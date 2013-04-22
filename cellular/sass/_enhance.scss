@@ -1,0 +1,102 @@
+/*****
+6.  Cellular Class Enhancements
+
+Special classes for CSS effects
+
+(c)2012 Adam Blankenship
+*****/
+
+.dropCap:first-letter {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.transparent {
+    -moz-opacity: .5;
+    -khtml-opacity: .5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    opacity: .5;
+}
+
+.transparent-background {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#7FB4B4B4',EndColorStr='#7FB4B4B4');
+    background-color: #EEE;
+    background-color: rgba(180, 180, 180, 0.5);
+}
+
+.dropShadow {
+    -moz-box-shadow: .5em .5em .5em $black;
+    -webkit-box-shadow: .5em .5em .5em $black;
+    box-shadow: .5em .5em .5em $black;
+}
+.innerShadow {
+    -moz-box-shadow: .3em .3em .5em .6em #ccc;
+    -webkit-box-shadow: .3em .3em .5em .6em #ccc;
+    box-shadow: .3em .3em .5em .6em #ccc;
+}
+
+.textShadow {
+    text-shadow: 1px 1px 3px #777;
+}
+
+// Borders
+
+.ribbon {
+    position: relative;
+    margin: 0 -1em;
+    padding: 0 1em;
+    border-bottom: 1px solid $dark_grey;
+    background: #777;
+
+    p {
+        color:#FEFEFE;
+    }
+}
+.ribbon:before,
+.ribbon:after {
+    content:" ";
+    position:absolute;
+    bottom:-.75em;
+    border-top:.75em solid $dark_grey;
+}
+.ribbon:before {
+    border-left:1em solid transparent;
+    left:0;
+}
+.ribbon:after {
+    border-right:1em solid transparent;
+    right:0;
+}
+
+// Keyframe animations
+
+// ($from, $to) defined using value between 0 & 1
+
+@include animate-scale(0.1, 1);
+
+// ($x_start, $x_end, $y_start, $y_end) defined using percentage
+// moveFromTop: (0%, 0%, -100%, 0%)
+// moveFromBottom: (0%, 0%, 100%, 0%)
+// moveFromLeft: (-100%, 0%, 0%, 0%)
+// moveFromRight: (100%, 0%, 0%, 0%)
+
+@include animate-move(100%, 0%, 0%, 0%);
+
+// ($deg_start, $deg_end) defined using deg
+// rotateClockwise: (0deg, 90deg)
+// rotateCounterClockwise: (0deg, -90deg)
+// rotate360: (0deg, 360deg)
+
+@include animate-rotate(0deg, 90deg);
+
+#animation.animate {
+    // scale || move || rotate
+    animation-name: scale;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 0;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
